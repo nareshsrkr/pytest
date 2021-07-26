@@ -22,7 +22,7 @@ def test_results_responsecheck():
     assert type(response.json()['data']['input']) is dict,"Date->results->inputs resultset is expected to be dictionary"
     output_dict_keys=['status', 'unintended_orf_status', 'GC_percent', 'df_status_id', 'source', 'RCST_output', 'type', 'id', 'df_status']
     for output_key in output_dict_keys:
-        assert output_key in response.json()['data']['results']['outputs'][0]['dnasequence'].keys(),"Previously existing key: " + key + " not found in the response"
+        assert output_key in response.json()['data']['results']['outputs'][0]['dnasequence'].keys(),"Previously existing key: " + output_key + " not found in the response"
     response.json()['data']['results']['outputs'][0]['dnasequence'].keys()
     input_dict_keys = ['request', 'DNA_segment']
     for input_key in input_dict_keys:
