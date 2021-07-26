@@ -26,4 +26,4 @@ def test_results_responsecheck():
     response.json()['data']['results']['outputs'][0]['dnasequence'].keys()
     input_dict_keys = ['request', 'DNA_segment']
     for input_key in input_dict_keys:
-        assert input_key in response.json()['data']['input'].keys(), "Previously existing key: " + key + " not found in the response"
+        assert input_key in response.json()['data']['input'].keys(), "Previously existing key: " + input_key + " not found in the response"
